@@ -1,0 +1,227 @@
+:root {
+  --desaturatedRedColor: hsl(0, 36%, 70%);
+  --darkGrayishRedColor: hsl(0, 6%, 24%);
+  --softRedColor: hsl(0, 93%, 68%);
+  --gradientsButtonColorLeft: hsl(0, 80%, 86%);
+  --gradientsButtonColorRight: hsl(0, 74%, 74%);
+}
+
+/* ELEMENTS */
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  width: min-content;
+}
+
+p {
+  color: var(--desaturatedRedColor);
+  line-height: 1.4rem;
+  font-size: 0.9rem;
+}
+
+form{
+  position: relative;
+}
+
+input{
+  border: 1px solid var(--desaturatedRedColor);
+  border-radius: 25px;
+  height: 45px;
+  width: 260px;
+  outline: none;
+  padding-left: 20px;
+}
+
+input:focus{
+  border: 2px solid var(--softRedColor);
+  border-radius: 25px;
+}
+
+button {
+  background-image: linear-gradient(135deg, var(--gradientsButtonColorLeft), var(--gradientsButtonColorRight) );
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 6px 15px 1px var(--gradientsButtonColorRight);
+  width: 65px;
+  height: 50px;
+}
+
+button:hover{
+  background-image: linear-gradient(155deg, var(--gradientsButtonColorLeft), var(--gradientsButtonColorLeft) );
+  cursor: pointer;
+}
+
+::placeholder{
+  color: var(--desaturatedRedColor);
+}
+
+/* CLASS */
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo-Section */
+.logoDiv {
+  margin: 30px auto 30px 30px;
+}
+
+.logoImgSvg {
+  width: 100px;
+  height: 20px;
+}
+
+/* Hero-Section */
+.contentHeroSection {
+  text-align: center;
+  margin: 65px 30px;
+}
+
+.headingSection h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.7rem;
+  margin: 5px auto;
+}
+
+.fstHeading {
+  color: var(--desaturatedRedColor);
+  font-weight: 300;
+}
+
+.secThrHeading {
+  color: var(--darkGrayishRedColor);
+  font-weight: 600;
+}
+
+.paraSection {
+  margin: 20px auto 25px;
+}
+
+/* Alert on Wrong Email format */
+.alertDiv{
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.buttonAndAlertDiv{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.alertValidEmail p{
+  color: var(--softRedColor);
+  font-size: 0.8rem;
+  margin: 6px auto auto 40px;
+  text-align: left;
+}
+
+/* Footer-Section */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* For JavaScript */
+
+.visibilityForJs{
+  visibility: hidden;
+}
+
+.inputOutlineForJs{
+  border: 2px solid var(--softRedColor);
+  border-radius: 25px;
+}
+
+/* Desktop Design */
+
+@media (min-width:376px) {
+/* ELEMENTS */
+  body{
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    width: auto;
+  }
+
+  button{
+    width: 85px;
+  }
+
+  input{
+    width: 350px;
+  }
+
+  p{
+    font-size: 0.95rem;
+  }
+
+/* CLASS */
+.container{
+  display: grid;
+  grid-template:
+  'logo heroImg'
+  'heroText heroImg';
+  grid-template-columns: 55% auto;
+  grid-template-rows: 20% auto;
+
+  padding: 0 40px;
+}
+
+/* Logo-Section */
+.logoDiv{
+  grid-area: logo;
+
+  margin: 60px auto 30px 120px;
+}
+
+.logoImgSvg{
+  width: auto;
+  height: auto;
+}
+
+/* Image-Section */
+.heroImg{
+  visibility: hidden;
+}
+
+.ImageHeroSection{
+  grid-area: heroImg;
+  background: url('../images/hero-desktop.jpg');
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 610px;
+}
+
+/* Text-Hero-Section */
+.contentHeroSection{
+  grid-area: heroText;
+
+  text-align: left;
+  margin: 65px 120px;
+  width: 410px;
+}
+
+.headingSection h1 {
+  font-size: 4rem;
+  letter-spacing: 1rem;
+}
+
+/*
+ - Desaturated Red: hsl(0, 36%, 70%)  #ce9797
+
+- Soft Red: hsl(0, 93%, 68%)   	#f96262
+- Dark Grayish Red: hsl(0, 6%, 24%)   	#413a3a
+
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+    #ffffff  to #fff5f5
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)     #f8bfbf   to #ee8c8c
+
+hsl(228, 45%, 44%)   #3e52a3
+*/

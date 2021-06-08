@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!-- Google Fonts & Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="container">
+
+      <div class="logoDiv">
+        <img class="logoImgSvg" src="images/logo.svg" alt="logoImgSvg">
+      </div>
+
+      <div class="ImageHeroSection">
+        <img class="heroImg" src="images/hero-mobile.jpg" alt="heroImg">
+      </div>
+
+      <div class="contentHeroSection">
+        <div class="headingSection">
+          <h1 class="fstHeading">WE'RE</h1>
+          <div class="secThrHeading">
+            <h1>COMING</h1>
+            <h1>SOON</h1>
+          </div>
+        </div>
+        <div class="paraSection">
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.
+          </p>
+        </div>
+        <div class="formHeroSection">
+          <form class="formClass" action="index.html" method="post">
+            <input type="email" name="EmailInput" placeholder="Email Address" required autofocus>
+            <div class="buttonAndAlertDiv">
+              <div class="alertDiv visibilityForJs">
+                <img src="images/icon-error.svg" alt="alertImg">
+              </div>
+              <button type="button" name="button">
+                <img src="images/icon-arrow.svg" alt="arrowImg">
+              </button>
+            </div>
+            <div class="alertValidEmail visibilityForJs">
+              <p>Please provide a valid email</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Sat-Sid</a>
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
